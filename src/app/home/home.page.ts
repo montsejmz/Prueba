@@ -19,4 +19,8 @@ export class HomePage {
     return this.data.getMessages();
   }
 
+  Confirmar(){
+    console.log("Hola");
+  }
+
 }

@@ -6,6 +6,22 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Escribir su nombre en esta card</ion-card-subtitle>
+    <ion-card-title>Nombres :)</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    -Montse :)
+    -
+    -
+    -
+    -
+
+  </ion-card-content>
+</ion-card>
+
 <ion-content [fullscreen]="true">
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -19,7 +35,9 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-list>
+  !<ion-list>
     <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
   </ion-list>
+
+  <ion-button (click)="Confirmar()"></ion-button>
 </ion-content>
