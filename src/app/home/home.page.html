@@ -6,23 +6,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>Escribir su nombre en esta card</ion-card-subtitle>
-    <ion-card-title>Nombres :)</ion-card-title>
-  </ion-card-header>
 
-  <ion-card-content>
-    -Montse :)
-    -
-    -
-    -
-    -
-
-  </ion-card-content>
-</ion-card>
 
 <ion-content [fullscreen]="true">
+
+  <div class="flex-center">
+      <ion-spinner name="crescent" color="success"></ion-spinner>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Escribir su nombre en esta card</ion-card-subtitle>
+      <ion-card-title>Nombres :)</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Montse
+    </ion-card-content>
+  </ion-card>
+
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
@@ -35,7 +37,7 @@
     </ion-toolbar>
   </ion-header>
   
-  !<ion-list>
+  <ion-list>
     <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
   </ion-list>
 
